@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -13,19 +14,15 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        leading:  const IconButton(
-         icon: Icon(Icons.menu),
-         tooltip: 'Navigation Menu',
-         onPressed:null ,
-         ),
-         title: const Text('My Day'),
-         actions: const[
-          IconButton(
-            onPressed: null,
-          icon:Icon(Icons.search),
-          ),
-          ],
-      ),
+  centerTitle: true,
+  title: const Text("To-Do List"),
+  actions: [
+    IconButton(
+      onPressed: () {},
+      icon: const Icon(CupertinoIcons.calendar),
+    ),
+  ],
+),
     );
   }
 }
